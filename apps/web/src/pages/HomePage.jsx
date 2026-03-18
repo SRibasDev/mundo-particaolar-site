@@ -4,58 +4,70 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Check } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../components/ui/carousel';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import FloatingWhatsAppButton from '../components/FloatingWhatsAppButton';
+// Removidos os imports de Header, Footer e FloatingWhatsAppButton pois já estão no App.jsx
 import TestimonialCard from '../components/TestimonialCard';
+
 function HomePage() {
   const whatsappNumber = '5511999999999';
   const whatsappMessage = encodeURIComponent('Olá! Vim pelo site e quero agendar uma visita 🐾');
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
-  const carouselImages = [{
-    url: 'https://images.unsplash.com/photo-1598126398754-57276a6c5fd8',
-    alt: 'Cães felizes brincando juntos em área de recreação'
-  }, {
-    url: 'https://images.unsplash.com/photo-1699309366611-c4cf7748dbec',
-    alt: 'Cães descansando confortavelmente em área de descanso'
-  }, {
-    url: 'https://images.unsplash.com/photo-1679673670335-aa7f8c6e26bf',
-    alt: 'Cuidadores interagindo carinhosamente com os cães'
-  }];
-  const testimonials = [{
-    dogPhoto: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb',
-    testimonialText: 'Meu Thor adora ficar no Mundo PartiCãoLar! Ele volta sempre feliz e cansado de tanto brincar. A equipe é super atenciosa e manda fotos todos os dias.',
-    ownerName: 'Camila Ferreira',
-    dogName: 'Thor',
-    rating: 5
-  }, {
-    dogPhoto: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e',
-    testimonialText: 'Confio de olhos fechados! A Nina sempre teve medo de ficar longe de mim, mas aqui ela se sente em casa. O cuidado e carinho fazem toda a diferença.',
-    ownerName: 'Rafael Santos',
-    dogName: 'Nina',
-    rating: 5
-  }, {
-    dogPhoto: 'https://images.unsplash.com/photo-1561037404-61cd46aa615b',
-    testimonialText: 'Melhor decisão que tomei! O Bento fica super animado quando chegamos. A estrutura é impecável e os relatórios diários me deixam tranquila durante o trabalho.',
-    ownerName: 'Juliana Costa',
-    dogName: 'Bento',
-    rating: 5
-  }, {
-    dogPhoto: 'https://images.unsplash.com/photo-1537151608828-ea2b11777ee8',
-    testimonialText: 'A Mel sempre foi agitada, mas aqui ela gasta toda energia de forma saudável. Voltou para casa mais calma e feliz. Recomendo muito!',
-    ownerName: 'Lucas Oliveira',
-    dogName: 'Mel',
-    rating: 5
-  }];
+
+  const carouselImages = [
+    {
+      url: 'https://images.unsplash.com/photo-1598126398754-57276a6c5fd8',
+      alt: 'Cães felizes brincando juntos em área de recreação'
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1699309366611-c4cf7748dbec',
+      alt: 'Cães descansando confortavelmente em área de descanso'
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1679673670335-aa7f8c6e26bf',
+      alt: 'Cuidadores interagindo carinhosamente com os cães'
+    }
+  ];
+
+  const testimonials = [
+    {
+      dogPhoto: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb',
+      testimonialText: 'Meu Thor adora ficar no Mundo PartiCãoLar! Ele volta sempre feliz e cansado de tanto brincar. A equipe é super atenciosa e manda fotos todos os dias.',
+      ownerName: 'Camila Ferreira',
+      dogName: 'Thor',
+      rating: 5
+    },
+    {
+      dogPhoto: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e',
+      testimonialText: 'Confio de olhos fechados! A Nina sempre teve medo de ficar longe de mim, mas aqui ela se sente em casa. O cuidado e carinho fazem toda a diferença.',
+      ownerName: 'Rafael Santos',
+      dogName: 'Nina',
+      rating: 5
+    },
+    {
+      dogPhoto: 'https://images.unsplash.com/photo-1561037404-61cd46aa615b',
+      testimonialText: 'Melhor decisão que tomei! O Bento fica super animado quando chegamos. A estrutura é impecável e os relatórios diários me deixam tranquila durante o trabalho.',
+      ownerName: 'Juliana Costa',
+      dogName: 'Bento',
+      rating: 5
+    },
+    {
+      dogPhoto: 'https://images.unsplash.com/photo-1537151608828-ea2b11777ee8',
+      testimonialText: 'A Mel sempre foi agitada, mas aqui ela gasta toda energia de forma saudável. Voltou para casa mais calma e feliz. Recomendo muito!',
+      ownerName: 'Lucas Oliveira',
+      dogName: 'Mel',
+      rating: 5
+    }
+  ];
+
   const socialProofBadges = ['+100 cães atendidos', 'Monitoramento 24h', 'Atualizações diárias'];
-  return <>
+
+  return (
+    <>
       <Helmet>
         <title>Mundo PartiCãoLar - Hotel e Creche para Cães em São Paulo</title>
         <meta name="description" content="Onde seu melhor amigo vive dias tão felizes quanto em casa. Hotel e creche para cães com monitoramento 24h, socialização supervisionada e muito carinho." />
       </Helmet>
 
-      <Header />
-      <FloatingWhatsAppButton />
+      {/* Header e FloatingWhatsAppButton removidos daqui */}
 
       <main>
         <section className="relative min-h-[100dvh] flex items-center bg-gradient-to-br from-primary/5 via-white to-secondary/5">
@@ -67,7 +79,7 @@ function HomePage() {
                 </h1>
                 
                 <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-prose">
-                  Ambiente seguro, acolhedor, cuidado profissonal,  e muita diversão para seu Aumigo(a)!
+                  Ambiente seguro, acolhedor, cuidado profissional, e muita diversão para seu Aumigo(a)!
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -84,21 +96,25 @@ function HomePage() {
                 </div>
 
                 <div className="flex flex-wrap items-center gap-6">
-                  {socialProofBadges.map((badge, index) => <div key={index} className="flex items-center gap-2">
+                  {socialProofBadges.map((badge, index) => (
+                    <div key={index} className="flex items-center gap-2">
                       <Check className="h-5 w-5 text-primary" />
                       <span className="text-sm font-medium text-foreground">{badge}</span>
-                    </div>)}
+                    </div>
+                  ))}
                 </div>
               </div>
 
               <div className="relative">
                 <Carousel className="w-full">
                   <CarouselContent>
-                    {carouselImages.map((image, index) => <CarouselItem key={index}>
+                    {carouselImages.map((image, index) => (
+                      <CarouselItem key={index}>
                         <div className="rounded-2xl overflow-hidden shadow-2xl">
                           <img src={image.url} alt={image.alt} className="w-full h-[400px] md:h-[500px] object-cover" />
                         </div>
-                      </CarouselItem>)}
+                      </CarouselItem>
+                    ))}
                   </CarouselContent>
                   <CarouselPrevious className="left-4" />
                   <CarouselNext className="right-4" />
@@ -120,7 +136,9 @@ function HomePage() {
             </div>
 
             <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
-              {testimonials.map((testimonial, index) => <TestimonialCard key={index} {...testimonial} />)}
+              {testimonials.map((testimonial, index) => (
+                <TestimonialCard key={index} {...testimonial} />
+              ))}
             </div>
           </div>
         </section>
@@ -143,7 +161,9 @@ function HomePage() {
         </section>
       </main>
 
-      <Footer />
-    </>;
+      {/* Footer removido daqui */}
+    </>
+  );
 }
+
 export default HomePage;

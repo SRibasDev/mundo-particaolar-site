@@ -1,9 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Eye, Heart, Users, FileText } from 'lucide-react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import FloatingWhatsAppButton from '../components/FloatingWhatsAppButton';
 import DifferentialBlock from '../components/DifferentialBlock';
 
 function AboutPage() {
@@ -26,7 +23,7 @@ function AboutPage() {
     {
       icon: Users,
       title: 'Equipe treinada',
-      description: 'Profissionais capacitados e apaixonados por cães, prontos para oferecer o melhor cuidado e carinho.'
+      description: 'Profissionais capacitados e apaixonados por cães, prontos para oferecer the melhor cuidado e carinho.'
     }
   ];
 
@@ -36,9 +33,6 @@ function AboutPage() {
         <title>Sobre Nós - Mundo PartiCãoLar</title>
         <meta name="description" content="Conheça o Mundo PartiCãoLar: mais do que um hotel, um segundo lar para o seu cão. Cuidado profissional com muito amor e dedicação." />
       </Helmet>
-
-      <Header />
-      <FloatingWhatsAppButton />
 
       <main>
         <section className="py-20 bg-gradient-to-br from-primary/5 via-white to-secondary/5">
@@ -108,8 +102,6 @@ function AboutPage() {
           </div>
         </section>
       </main>
-
-      <Footer />
     </>
   );
 }

@@ -1,9 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Crown, Trees, Shield } from 'lucide-react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import FloatingWhatsAppButton from '../components/FloatingWhatsAppButton.jsx';
 import DifferentialBlock from '../components/DifferentialBlock.jsx';
 
 function StructurePage() {
@@ -31,9 +28,6 @@ function StructurePage() {
         <title>Nossa Estrutura - Mundo PartiCãoLar</title>
         <meta name="description" content="Conheça nossa estrutura: espaços VIP, área de lazer ampla e protocolos rigorosos de saúde e segurança para o seu pet." />
       </Helmet>
-
-      <Header />
-      <FloatingWhatsAppButton />
 
       <main>
         <section className="py-20 bg-gradient-to-br from-primary/5 via-white to-secondary/5">
@@ -107,8 +101,6 @@ function StructurePage() {
           </div>
         </section>
       </main>
-
-      <Footer />
     </>
   );
 }

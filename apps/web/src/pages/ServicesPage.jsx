@@ -2,9 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Home, Sun, Sparkles } from 'lucide-react';
 import { Button } from '../components/ui/button';
-import Header from '../components/Header.jsx';
-import Footer from '../components/Footer.jsx';
-import FloatingWhatsAppButton from '../components/FloatingWhatsAppButton.jsx';
 import ServiceCard from '../components/ServiceCard.jsx';
 
 function ServicesPage() {
@@ -60,9 +57,6 @@ function ServicesPage() {
         <title>Nossos Serviços - Mundo PartiCãoLar</title>
         <meta name="description" content="Conheça nossos serviços: Hotelzinho, Creche/Daycare e Banho e Tosa. Cuidado completo para o seu melhor amigo." />
       </Helmet>
-
-      <Header />
-      <FloatingWhatsAppButton />
 
       <main>
         <section className="py-20 bg-gradient-to-br from-primary/5 via-white to-secondary/5">
@@ -137,8 +131,6 @@ function ServicesPage() {
           </div>
         </section>
       </main>
-
-      <Footer />
     </>
   );
 }
