@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 import { Button } from './ui/button';
+import logo from '../logo.png'; // Certifique-se de que a logo está nesta pasta
 
 function Header() {
   const location = useLocation();
@@ -22,10 +23,13 @@ function Header() {
     <header className="sticky top-0 z-50 bg-white border-b border-border shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
+          {/* Logo Substituída aqui */}
           <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-              MUNDO PARTICÃOLAR
-            </span>
+            <img 
+              src={logo} 
+              alt="Logo Mundo PartiCãoLar" 
+              className="h-28 w-auto object-contain transition-transform hover:scale-105"   
+            />
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
@@ -52,6 +56,8 @@ function Header() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px]">
               <nav className="flex flex-col gap-6 mt-8">
+                {/* Logo também no menu mobile (opcional) */}
+                <img src={logo} alt="Logo" className="h-12 w-auto object-contain mb-4" />
                 {navLinks.map((link) => (
                   <Link
                     key={link.path}

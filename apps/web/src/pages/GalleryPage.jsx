@@ -1,8 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import FloatingWhatsAppButton from '../components/FloatingWhatsAppButton';
+// Removidos os imports de Header, Footer e FloatingWhatsAppButton pois já estão no App.jsx
 
 function GalleryPage() {
   const galleryItems = [
@@ -55,8 +53,7 @@ function GalleryPage() {
         <meta name="description" content="Veja momentos especiais dos nossos hóspedes: brincadeiras, descanso, socialização e muita felicidade no Mundo PartiCãoLar." />
       </Helmet>
 
-      <Header />
-      <FloatingWhatsAppButton />
+      {/* Header e FloatingWhatsAppButton removidos daqui */}
 
       <main>
         <section className="py-20 bg-gradient-to-br from-primary/5 via-white to-secondary/5">
@@ -114,7 +111,7 @@ function GalleryPage() {
         </section>
       </main>
 
-      <Footer />
+      {/* Footer removido daqui */}
     </>
   );
 }

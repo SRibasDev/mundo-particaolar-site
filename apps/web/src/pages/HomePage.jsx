@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Check } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../components/ui/carousel';
-// Removidos os imports de Header, Footer e FloatingWhatsAppButton pois já estão no App.jsx
 import TestimonialCard from '../components/TestimonialCard';
 
 function HomePage() {
