@@ -3,25 +3,29 @@ import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Instagram, Facebook } from 'lucide-react';
 
 function Footer() {
-  const whatsappNumber = '5511999999999';
+  const whatsappNumber = '5511986479033';
   const whatsappMessage = encodeURIComponent('Olá! Vim pelo site e quero agendar uma visita 🐾');
 
   return (
-    <footer className="bg-accent border-t border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-accent border-t border-border py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <div>
-            <span className="text-xl font-bold bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-              MUNDO PARTICÃOLAR
-            </span>
-            <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
+          <div className="flex flex-col items-center md:items-start">
+            <Link to="/" className="flex items-center mb-4">
+              <img 
+                src="/src/logo.png" 
+                alt="Logo Mundo PartiCãoLar" 
+                className="h-20 w-auto object-contain transition-transform hover:scale-105" 
+              />
+            </Link>
+            <p className="text-sm text-muted-foreground leading-relaxed text-center md:text-left">
               Onde seu melhor amigo vive dias tão felizes quanto em casa. Cuidado, carinho e segurança para o seu pet.
             </p>
           </div>
 
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <span className="text-base font-semibold text-foreground">Links rápidos</span>
-            <nav className="mt-4 flex flex-col gap-3">
+            <nav className="mt-4 flex flex-col items-center md:items-start gap-3">
               <Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200">
                 Home
               </Link>
@@ -40,9 +44,9 @@ function Footer() {
             </nav>
           </div>
 
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <span className="text-base font-semibold text-foreground">Contato</span>
-            <div className="mt-4 flex flex-col gap-3">
+            <div className="mt-4 flex flex-col items-center md:items-start gap-3">
               <a
                 href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
                 target="_blank"
@@ -50,14 +54,14 @@ function Footer() {
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
               >
                 <Phone className="h-4 w-4" />
-                <span>(11) 99999-9999</span>
+                <span>(11) 98647-9033</span>
               </a>
               <a
-                href="mailto:contato@mundoparticaolar.com.br"
+                href="mailto:mundoparticaolar@gmail.com"
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
               >
                 <Mail className="h-4 w-4" />
-                <span>contato@mundoparticaolar.com.br</span>
+                <span>mundoparticaolar@gmail.com</span>
               </a>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <MapPin className="h-4 w-4" />
@@ -65,7 +69,7 @@ function Footer() {
               </div>
               <div className="flex items-center gap-4 mt-2">
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/mundoparticaolar"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors duration-200"
@@ -73,7 +77,7 @@ function Footer() {
                   <Instagram className="h-5 w-5" />
                 </a>
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/profile.php?id=61573322237549"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary transition-colors duration-200"

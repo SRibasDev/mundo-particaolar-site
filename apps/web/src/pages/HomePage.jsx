@@ -7,9 +7,9 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import TestimonialCard from '../components/TestimonialCard';
 
 function HomePage() {
-  const whatsappNumber = '5511999999999';
+  const whatsappNumber = '5511986479033';
   const whatsappMessage = encodeURIComponent('Olá! Vim pelo site e quero agendar uma visita 🐾');
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/${5511986479033}?text=${whatsappMessage}`;
 
   const carouselImages = [
     {
