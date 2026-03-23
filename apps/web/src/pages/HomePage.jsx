@@ -13,16 +13,16 @@ function HomePage() {
 
   const carouselImages = [
     {
-      url: 'https://images.unsplash.com/photo-1598126398754-57276a6c5fd8',
-      alt: 'Cães felizes brincando juntos em área de recreação'
+      url: './src/images/dogs-brincando-molhados.png',
+      alt: 'Dogs na área externa molhada, se refrescando e se divertindo juntos'
     },
     {
-      url: 'https://images.unsplash.com/photo-1699309366611-c4cf7748dbec',
-      alt: 'Cães descansando confortavelmente em área de descanso'
+      url: './src/images/dogs-sentados.png',
+      alt: 'Dogs sentados em um ambiente caótico'
     },
     {
-      url: 'https://images.unsplash.com/photo-1679673670335-aa7f8c6e26bf',
-      alt: 'Cuidadores interagindo carinhosamente com os cães'
+      url: './src/images/dogs-brincando-carnaval.png',
+      alt: 'Dogs brincando no carnaval'
     }
   ];
 

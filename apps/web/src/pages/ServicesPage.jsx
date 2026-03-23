@@ -5,7 +5,7 @@ import { Button } from '../components/ui/button';
 import ServiceCard from '../components/ServiceCard.jsx';
 
 function ServicesPage() {
-  const whatsappNumber = '5511999999999';
+  const whatsappNumber = '5511986479033';
   const whatsappMessage = encodeURIComponent('Olá! Vim pelo site e quero agendar uma visita 🐾');
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
@@ -18,19 +18,18 @@ function ServicesPage() {
         'Acomodações confortáveis e higienizadas',
         'Monitoramento 24 horas por dia',
         'Alimentação balanceada (ou a dieta do seu pet)',
-        'Recreação supervisionada diária',
-        'Relatórios com fotos e vídeos',
+        'Relatórios com fotos e vídeos pelo WhatsApp',
         'Administração de medicamentos se necessário'
       ]
     },
     {
       icon: Sun,
-      title: 'Creche / Daycare',
+      title: 'Creche',
       description: 'Seu cão passa o dia brincando, socializando e gastando energia de forma saudável enquanto você trabalha ou resolve seus compromissos.',
       benefits: [
         'Socialização com outros cães',
-        'Atividades recreativas supervisionadas',
         'Ambiente seguro e estimulante',
+        'Brincadeiras com frutas e legumes fresquinhos',
         'Horários flexíveis (meio período ou dia inteiro)',
         'Atualizações durante o dia',
         'Cães voltam cansados e felizes'
@@ -55,7 +54,7 @@ function ServicesPage() {
     <>
       <Helmet>
         <title>Nossos Serviços - Mundo PartiCãoLar</title>
-        <meta name="description" content="Conheça nossos serviços: Hotelzinho, Creche/Daycare e Banho e Tosa. Cuidado completo para o seu melhor amigo." />
+        <meta name="description" content="Conheça nossos serviços: Creche, Hotelzinho e Banho e Tosa. Cuidado completo para o seu melhor amigo." />
       </Helmet>
 
       <main>
@@ -76,8 +75,8 @@ function ServicesPage() {
               </div>
               <div className="order-1 md:order-2 flex items-center">
                 <img
-                  src="https://images.unsplash.com/photo-1598126398754-57276a6c5fd8"
-                  alt="Cães felizes brincando em área de recreação supervisionada"
+                  src="./src/images/dogs-hotelzinho.png"
+                  alt="Forest e Rita no hotelzinho"
                   className="w-full h-[400px] object-cover rounded-2xl shadow-lg"
                 />
               </div>
@@ -86,8 +85,8 @@ function ServicesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-16">
               <div className="flex items-center">
                 <img
-                  src="https://images.unsplash.com/photo-1679673670335-aa7f8c6e26bf"
-                  alt="Cuidadores profissionais interagindo com cães durante o daycare"
+                  src="./src/images/sentados-atenciosos.png"
+                  alt="Dogs sentados"
                   className="w-full h-[400px] object-cover rounded-2xl shadow-lg"
                 />
               </div>
@@ -102,7 +101,7 @@ function ServicesPage() {
               </div>
               <div className="order-1 md:order-2 flex items-center">
                 <img
-                  src="https://images.unsplash.com/photo-1699309366611-c4cf7748dbec"
+                  src="./src/images/filo-carnaval.png"
                   alt="Cão limpo e feliz após banho e tosa profissional"
                   className="w-full h-[400px] object-cover rounded-2xl shadow-lg"
                 />
