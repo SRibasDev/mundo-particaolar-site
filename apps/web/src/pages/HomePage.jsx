@@ -21,35 +21,35 @@ function HomePage() {
       alt: 'Dogs sentados em um ambiente caótico'
     },
     {
-      url: './src/images/dogs-brincando-carnaval.png',
-      alt: 'Dogs brincando no carnaval'
+      url: './src/images/brincadeira-piscina.png',
+      alt: 'Dogs brincando na piscina'
     }
   ];
 
   const testimonials = [
     {
-      dogPhoto: 'https://images.unsplash.com/photo-1587300003388-59208cc962cb',
-      testimonialText: 'Meu Thor adora ficar no Mundo PartiCãoLar! Ele volta sempre feliz e cansado de tanto brincar. A equipe é super atenciosa e manda fotos todos os dias.',
-      ownerName: 'Camila Ferreira',
-      dogName: 'Thor',
+      dogPhoto: '/src/images/lola-com-bolinha.png',
+      testimonialText: 'A Lolinha adora ficar no Mundo PartiCãoLar! Ele volta sempre feliz e cansado de tanto brincar. A equipe é super atenciosa e manda fotos todos os dias.',
+      ownerName: 'Fulana',
+      dogName: 'Lola',
       rating: 5
     },
     {
-      dogPhoto: 'https://images.unsplash.com/photo-1583511655857-d19b40a7a54e',
-      testimonialText: 'Confio de olhos fechados! A Nina sempre teve medo de ficar longe de mim, mas aqui ela se sente em casa. O cuidado e carinho fazem toda a diferença.',
-      ownerName: 'Rafael Santos',
-      dogName: 'Nina',
+      dogPhoto: '/src/images/surf-piscina.png',
+      testimonialText: 'Confio de olhos fechados! O Surf adora a creche e eu fico tranquilo sabendo que ele está em um ambiente seguro e cheio de carinho. O monitoramento 24h é um diferencial que me conquistou.',
+      ownerName: 'Cicrano',
+      dogName: 'Surf',
       rating: 5
     },
     {
-      dogPhoto: 'https://images.unsplash.com/photo-1561037404-61cd46aa615b',
+      dogPhoto: '',
       testimonialText: 'Melhor decisão que tomei! O Bento fica super animado quando chegamos. A estrutura é impecável e os relatórios diários me deixam tranquila durante o trabalho.',
       ownerName: 'Juliana Costa',
       dogName: 'Bento',
       rating: 5
     },
     {
-      dogPhoto: 'https://images.unsplash.com/photo-1537151608828-ea2b11777ee8',
+      dogPhoto: '',
       testimonialText: 'A Mel sempre foi agitada, mas aqui ela gasta toda energia de forma saudável. Voltou para casa mais calma e feliz. Recomendo muito!',
       ownerName: 'Lucas Oliveira',
       dogName: 'Mel',

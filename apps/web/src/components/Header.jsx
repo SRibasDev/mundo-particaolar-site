@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 import { Button } from './ui/button';
-import logo from '/src/images/logo.png'; // Certifique-se de que a logo está nesta pasta
+import logo from '/src/images/logo.png';
 
 function Header() {
   const location = useLocation();

@@ -49,7 +49,7 @@ function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
               <div>
                 <img
-                  src="https://images.unsplash.com/photo-1679673670335-aa7f8c6e26bf"
+                  src="/src/images/milena-carol.png"
                   alt="Equipe do Mundo PartiCãoLar cuidando carinhosamente dos cães"
                   className="w-full h-[500px] object-cover rounded-2xl shadow-lg"
                 />
@@ -91,7 +91,7 @@ function AboutPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href={`https://wa.me/5511999999999?text=${encodeURIComponent('Olá! Vim pelo site e quero agendar uma visita 🐾')}`}
+                href={`https://wa.me/5511986479033?text=${encodeURIComponent('Olá! Vim pelo site e quero agendar uma visita 🐾')}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-lg transition-all duration-200 active:scale-98"

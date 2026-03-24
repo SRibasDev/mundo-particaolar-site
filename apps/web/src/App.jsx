@@ -8,10 +8,13 @@ import AboutPage from './pages/AboutPage';
 import StructurePage from './pages/StructurePage';
 import GalleryPage from './pages/GalleryPage';
 import FloatingWhatsAppButton from './components/FloatingWhatsAppButton';
+import ScrollToTop from './components/ScrollToTop';
+
 
 export default function App() {
   return (
     <Router>
+      <ScrollToTop /> {/* Adicione aqui para capturar as mudanças de rota */}
       <div className="flex flex-col min-h-screen">
         <Header />
         <main className="flex-grow">

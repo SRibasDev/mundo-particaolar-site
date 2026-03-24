@@ -1,46 +1,45 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-// Removidos os imports de Header, Footer e FloatingWhatsAppButton pois já estão no App.jsx
 
 function GalleryPage() {
   const galleryItems = [
     {
-      image: 'https://images.unsplash.com/photo-1638766211878-6c3910aa92b6',
+      image: '',
       caption: 'Hora da soneca 😴',
       alt: 'Cão descansando confortavelmente após brincadeiras'
     },
     {
-      image: 'https://images.unsplash.com/photo-1463371009993-9472b8bdb12c',
+      image: '',
       caption: 'Dia de diversão 🐾',
       alt: 'Cães brincando juntos em área de recreação'
     },
     {
-      image: 'https://images.unsplash.com/photo-1681853081020-c7e9b289eb1f',
+      image: '',
       caption: 'Amizades que fazem bem ❤️',
       alt: 'Dois cães interagindo de forma amigável'
     },
     {
-      image: 'https://images.unsplash.com/photo-1500340581687-1c007a2596f4',
+      image: '',
       caption: 'Momento de carinho 🥰',
       alt: 'Cuidador acariciando cão com carinho'
     },
     {
-      image: 'https://images.unsplash.com/photo-1691418977981-3cecb98205cc',
+      image: '',
       caption: 'Energia pura! ⚡',
       alt: 'Cão correndo feliz pela área de lazer'
     },
     {
-      image: 'https://images.unsplash.com/photo-1703299943022-b0f59e980e47',
+      image: '',
       caption: 'Relaxando no sol ☀️',
       alt: 'Cão aproveitando área externa com sol'
     },
     {
-      image: 'https://images.unsplash.com/photo-1547475250-c61c2b4f408c',
+      image: '',
       caption: 'Brincadeira supervisionada 🎾',
       alt: 'Cães brincando com bola sob supervisão'
     },
     {
-      image: 'https://images.unsplash.com/photo-1693615774176-a5560f55ac49',
+      image: '',
       caption: 'Felicidade garantida 🌟',
       alt: 'Cão sorrindo feliz durante atividade recreativa'
     }
