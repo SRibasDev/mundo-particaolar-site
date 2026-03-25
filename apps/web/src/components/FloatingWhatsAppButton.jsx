@@ -6,6 +6,7 @@ function FloatingWhatsAppButton() {
   const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
   const whatsappMessage = encodeURIComponent('Olá! Vim pelo site e quero agendar uma visita 🐾');
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  
 
   useEffect(() => {
     const handleScroll = () => {

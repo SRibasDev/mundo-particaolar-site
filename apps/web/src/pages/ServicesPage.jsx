@@ -75,7 +75,7 @@ function ServicesPage() {
               </div>
               <div className="order-1 md:order-2 flex items-center">
                 <img
-                  src="/assets/images/services/dogs-hotelzinho.png"
+                  src="/assets/images/services/hotel.png"
                   alt="Forest e Rita no hotelzinho"
                   className="w-full h-[400px] object-cover rounded-2xl shadow-lg"
                 />
@@ -85,7 +85,7 @@ function ServicesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-16">
               <div className="flex items-center">
                 <img
-                  src="/assets/images/services/sentados-atenciosos.png"
+                  src="/assets/images/services/creche.png"
                   alt="Dogs sentados"
                   className="w-full h-[400px] object-cover rounded-2xl shadow-lg"
                 />
@@ -101,7 +101,7 @@ function ServicesPage() {
               </div>
               <div className="order-1 md:order-2 flex items-center">
                 <img
-                  src="/assets/images/services/filo-carnaval.png"
+                  src="/assets/images/services/banho.png"
                   alt="Cão limpo e feliz após banho e tosa profissional"
                   className="w-full h-[400px] object-cover rounded-2xl shadow-lg"
                 />
