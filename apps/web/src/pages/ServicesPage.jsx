@@ -1,11 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Home, Sun, Sparkles } from 'lucide-react';
-import { Button } from '../components/ui/button';
-import ServiceCard from '../components/ServiceCard.jsx';
+import { Button } from '@/components/ui/button';
+import ServiceCard from '@/components/ServiceCard.jsx';
 
 function ServicesPage() {
-  const whatsappNumber = '5511986479033';
+  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
   const whatsappMessage = encodeURIComponent('Olá! Vim pelo site e quero agendar uma visita 🐾');
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
@@ -62,7 +62,7 @@ function ServicesPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                Nossos serviços
+                Nossos Serviços
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                 Oferecemos cuidado completo para o seu pet com profissionalismo, carinho e dedicação
@@ -75,7 +75,7 @@ function ServicesPage() {
               </div>
               <div className="order-1 md:order-2 flex items-center">
                 <img
-                  src="./src/images/dogs-hotelzinho.png"
+                  src="/assets/images/services/dogs-hotelzinho.png"
                   alt="Forest e Rita no hotelzinho"
                   className="w-full h-[400px] object-cover rounded-2xl shadow-lg"
                 />
@@ -85,7 +85,7 @@ function ServicesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-16">
               <div className="flex items-center">
                 <img
-                  src="./src/images/sentados-atenciosos.png"
+                  src="/assets/images/services/sentados-atenciosos.png"
                   alt="Dogs sentados"
                   className="w-full h-[400px] object-cover rounded-2xl shadow-lg"
                 />
@@ -101,7 +101,7 @@ function ServicesPage() {
               </div>
               <div className="order-1 md:order-2 flex items-center">
                 <img
-                  src="./src/images/filo-carnaval.png"
+                  src="/assets/images/services/filo-carnaval.png"
                   alt="Cão limpo e feliz após banho e tosa profissional"
                   className="w-full h-[400px] object-cover rounded-2xl shadow-lg"
                 />
@@ -121,7 +121,7 @@ function ServicesPage() {
             <Button
               asChild
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-200 active:scale-98"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-200 hover:translate-y-[-2px] active:scale-98"
             >
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                 Falar com nossa equipe

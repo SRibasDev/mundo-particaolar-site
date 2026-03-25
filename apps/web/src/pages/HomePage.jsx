@@ -2,57 +2,71 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Check } from 'lucide-react';
-import { Button } from '../components/ui/button';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../components/ui/carousel';
-import TestimonialCard from '../components/TestimonialCard';
+import { Button } from '@/components/ui/button';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import TestimonialCard from '@/components/TestimonialCard';
 
 function HomePage() {
-  const whatsappNumber = '5511986479033';
+  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
   const whatsappMessage = encodeURIComponent('Olá! Vim pelo site e quero agendar uma visita 🐾');
-  const whatsappUrl = `https://wa.me/${5511986479033}?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
   const carouselImages = [
     {
-      url: './src/images/dogs-brincando-molhados.png',
-      alt: 'Dogs na área externa molhada, se refrescando e se divertindo juntos'
+      url: '/assets/images/carousel/brincadeira-piscina.png',
+      alt: 'Dogs na piscina'
     },
     {
-      url: './src/images/dogs-sentados.png',
+      url: '/assets/images/carousel/dogs-sentados.png',
       alt: 'Dogs sentados em um ambiente caótico'
     },
     {
-      url: './src/images/brincadeira-piscina.png',
+      url: '/assets/images/carousel/dinamica-frutas.png',
       alt: 'Dogs brincando na piscina'
     }
   ];
 
   const testimonials = [
     {
-      dogPhoto: '/src/images/lola-com-bolinha.png',
-      testimonialText: 'A Lolinha adora ficar no Mundo PartiCãoLar! Ele volta sempre feliz e cansado de tanto brincar. A equipe é super atenciosa e manda fotos todos os dias.',
+      dogPhoto: '/assets/images/testimonials/lola.png',
+      testimonialText: 'Texto do depoimento aqui...',
       ownerName: 'Fulana',
       dogName: 'Lola',
       rating: 5
     },
     {
-      dogPhoto: '/src/images/surf-piscina.png',
-      testimonialText: 'Confio de olhos fechados! O Surf adora a creche e eu fico tranquilo sabendo que ele está em um ambiente seguro e cheio de carinho. O monitoramento 24h é um diferencial que me conquistou.',
+      dogPhoto: '/assets/images/testimonials/surf.png',
+      testimonialText: 'Texto do depoimento aqui...',
       ownerName: 'Cicrano',
       dogName: 'Surf',
       rating: 5
     },
     {
-      dogPhoto: '',
-      testimonialText: 'Melhor decisão que tomei! O Bento fica super animado quando chegamos. A estrutura é impecável e os relatórios diários me deixam tranquila durante o trabalho.',
-      ownerName: 'Juliana Costa',
-      dogName: 'Bento',
+      dogPhoto: '/assets/images/testimonials/bartolomeu.png',
+      testimonialText: 'Texto do depoimento aqui...',
+      ownerName: 'Fulana',
+      dogName: 'Bartolomeu',
       rating: 5
     },
     {
-      dogPhoto: '',
-      testimonialText: 'A Mel sempre foi agitada, mas aqui ela gasta toda energia de forma saudável. Voltou para casa mais calma e feliz. Recomendo muito!',
-      ownerName: 'Lucas Oliveira',
-      dogName: 'Mel',
+      dogPhoto: '/assets/images/testimonials/stark.png',
+      testimonialText: 'Texto do depoimento aqui...',
+      ownerName: 'Fulano',
+      dogName: 'Stark',
+      rating: 5
+    },
+    {
+      dogPhoto: '/assets/images/testimonials/irmaosBuldog.png',
+      testimonialText: 'Texto do depoimento aqui...',
+      ownerName: 'Fulanos',
+      dogName: 'Nomes dos Cães',
+      rating: 5
+    },
+    {
+      dogPhoto: '/assets/images/testimonials/ragnar.png',
+      testimonialText: 'Texto do depoimento aqui...',
+      ownerName: 'Fulano',
+      dogName: 'Ragnar',
       rating: 5
     }
   ];
@@ -82,14 +96,14 @@ function HomePage() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-200 active:scale-98">
+                  <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-200 hover:translate-y-[-2px] active:scale-98">
                     <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                       Agendar uma visita pelo WhatsApp
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </a>
                   </Button>
                   
-                  <Button asChild variant="outline" size="lg" className="transition-all duration-200 active:scale-98">
+                  <Button asChild variant="outline" size="lg" className="transition-all duration-200 hover:translate-y-[-2px] active:scale-98">
                     <Link to="/servicos">Ver como funciona</Link>
                   </Button>
                 </div>
@@ -134,7 +148,7 @@ function HomePage() {
               </p>
             </div>
 
-            <div className="columns-1 md:columns-2 lg:columns-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {testimonials.map((testimonial, index) => (
                 <TestimonialCard key={index} {...testimonial} />
               ))}
@@ -150,7 +164,7 @@ function HomePage() {
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
               Trabalhamos com grupos pequenos para oferecer atenção individualizada e segurança máxima para cada pet.
             </p>
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-200 active:scale-98">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-200 hover:translate-y-[-2px] active:scale-98">
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                 Reserve sua vaga agora
                 <ArrowRight className="ml-2 h-5 w-5" />

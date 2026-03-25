@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
-import { Button } from './ui/button';
-import logo from '/src/images/logo.png';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Button } from '@/components/ui/button';
 
 function Header() {
   const location = useLocation();
@@ -26,7 +25,7 @@ function Header() {
           {/* Logo Substituída aqui */}
           <Link to="/" className="flex items-center">
             <img 
-              src={logo} 
+              src='/public/assets/images/logos/logo.png' 
               alt="Logo Mundo PartiCãoLar" 
               className="h-28 w-auto object-contain transition-transform hover:scale-105"   
             />
@@ -37,9 +36,9 @@ function Header() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-base font-medium transition-colors duration-200 ${
+                className={`text-base font-medium transition-all duration-200 ${
                   isActive(link.path)
-                    ? 'text-primary border-b-2 border-primary pb-1'
+                    ? 'text-primary border-b-2 border-primary pb-1 scale-105'
                     : 'text-foreground hover:text-primary'
                 }`}
               >
@@ -57,15 +56,15 @@ function Header() {
             <SheetContent side="right" className="w-[300px]">
               <nav className="flex flex-col gap-6 mt-8">
                 {/* Logo também no menu mobile (opcional) */}
-                <img src={logo} alt="Logo" className="h-12 w-auto object-contain mb-4" />
+                <img src='/assets/images/logos/logo.png' alt="Logo" className="h-12 w-auto object-contain mb-4" />
                 {navLinks.map((link) => (
                   <Link
                     key={link.path}
                     to={link.path}
                     onClick={() => setIsOpen(false)}
-                    className={`text-lg font-medium transition-colors duration-200 ${
+                    className={`text-lg font-medium transition-all duration-200 ${
                       isActive(link.path)
-                        ? 'text-primary font-semibold'
+                        ? 'text-primary font-semibold scale-105'
                         : 'text-foreground hover:text-primary'
                     }`}
                   >

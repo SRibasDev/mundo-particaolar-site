@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Crown, Trees, Shield } from 'lucide-react';
-import DifferentialBlock from '../components/DifferentialBlock.jsx';
+import DifferentialBlock from '@/components/DifferentialBlock.jsx';
 
 function StructurePage() {
   const structureBlocks = [
@@ -44,7 +44,7 @@ function StructurePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
               <div>
                 <img
-                  src="/src/images/espaco-creche.png"
+                  src="/assets/images/structure/espaco-creche.png"
                   alt="Espaço grande e ambiente perfeito para socialização e brincadeiras supervisionadas"
                   className="w-full h-[450px] object-cover rounded-2xl shadow-lg"
                 />
@@ -60,7 +60,7 @@ function StructurePage() {
               </div>
               <div className="order-1 md:order-2">
                 <img
-                  src="/src/images/espaco-brincadeiras-creche.png"
+                  src="/assets/images/structure/espaco-brincadeiras-creche.png"
                   alt="Área de lazer ampla para dinâmicas e brincadeiras supervisionadas"
                   className="w-full h-[450px] object-cover rounded-2xl shadow-lg"
                 />
@@ -70,7 +70,7 @@ function StructurePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
                 <img
-                  src="/src/images/protocolo-saude.png"
+                  src="/assets/images/structure/protocolo-saude.png"
                   alt="Equipe treinada aplicando protocolos de saúde e segurança"
                   className="w-full h-[450px] object-cover rounded-2xl shadow-lg"
                 />
@@ -91,10 +91,10 @@ function StructurePage() {
               Agende uma visita e conheça pessoalmente nossa estrutura e equipe
             </p>
             <a
-              href={`https://wa.me/5511986479033?text=${encodeURIComponent('Olá! Vim pelo site e quero agendar uma visita 🐾')}`}
+              href={`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER}?text=${encodeURIComponent('Olá! Vim pelo site e quero agendar uma visita 🐾')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-lg transition-all duration-200 active:scale-98"
+              className="inline-flex items-center justify-center px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-lg transition-all duration-200 hover:translate-y-[-2px] active:scale-98"
             >
               Agendar visita
             </a>

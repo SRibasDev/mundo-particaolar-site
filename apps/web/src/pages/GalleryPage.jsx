@@ -1,47 +1,57 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-
+//mudar alt das imagens
 function GalleryPage() {
   const galleryItems = [
     {
-      image: '',
-      caption: 'Hora da soneca 😴',
-      alt: 'Cão descansando confortavelmente após brincadeiras'
+      image: '/assets/images/gallery/foto1.png',
+      caption: 'Coelho ou cão? 🐰🐶',
+      alt: 'Cão com cenoura'
     },
     {
-      image: '',
-      caption: 'Dia de diversão 🐾',
-      alt: 'Cães brincando juntos em área de recreação'
+      image: '/assets/images/gallery/foto2.png',
+      caption: 'Cachorrinha Pintadinha🐾',
+      alt: 'Cachorrinha brincando'
     },
     {
-      image: '',
+      image: '/assets/images/gallery/foto3.png',
       caption: 'Amizades que fazem bem ❤️',
-      alt: 'Dois cães interagindo de forma amigável'
+      alt: 'Dois cães juntos'
     },
     {
-      image: '',
-      caption: 'Momento de carinho 🥰',
-      alt: 'Cuidador acariciando cão com carinho'
+      image: '/assets/images/gallery/foto4.png',
+      caption: 'Dia de piscina 💦',
+      alt: 'Cães na piscina'
     },
     {
-      image: '',
-      caption: 'Energia pura! ⚡',
-      alt: 'Cão correndo feliz pela área de lazer'
+      image: '/assets/images/gallery/foto5.png',
+      caption: 'Energia pura ⚡',
+      alt: 'Cão correndo'
     },
     {
-      image: '',
-      caption: 'Relaxando no sol ☀️',
-      alt: 'Cão aproveitando área externa com sol'
+      image: '/assets/images/gallery/foto6.png',
+      caption: 'Brincadeira com legumes 🥕',
+      alt: 'Cão deitado ao sol'
     },
     {
-      image: '',
-      caption: 'Brincadeira supervisionada 🎾',
-      alt: 'Cães brincando com bola sob supervisão'
+      image: '/assets/images/gallery/foto7.png',
+      caption: 'Ei! Olha o petisco! 🐾',
+      alt: 'Cães jogando com bola'
     },
     {
-      image: '',
-      caption: 'Felicidade garantida 🌟',
-      alt: 'Cão sorrindo feliz durante atividade recreativa'
+      image: '/assets/images/gallery/foto8.png',
+      caption: 'Melhor hora do dia: hora de comer! 🍉',
+      alt: 'Cão feliz'
+    },
+    {
+      image: '/assets/images/gallery/foto9.png',
+      caption: 'Aventura ao ar livre 🌿',
+      alt: 'Cão em área verde'
+    },
+    {
+      image: '/assets/images/gallery/foto10.png',
+      caption: 'Hora do descanso 😴',
+      alt: 'Cão descansando'
     }
   ];
 
@@ -49,7 +59,7 @@ function GalleryPage() {
     <>
       <Helmet>
         <title>Galeria - Mundo PartiCãoLar</title>
-        <meta name="description" content="Veja momentos especiais dos nossos hóspedes: brincadeiras, descanso, socialização e muita felicidade no Mundo PartiCãoLar." />
+        <meta name="description" content="Veja alguns dos momentos especiais dos nossos hóspedes: brincadeiras, descanso, socialização e muita felicidade no Mundo PartiCãoLar." />
       </Helmet>
 
       {/* Header e FloatingWhatsAppButton removidos daqui */}
@@ -62,26 +72,24 @@ function GalleryPage() {
                 Galeria
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Momentos especiais dos nossos hóspedes de quatro patas
+                Alguns momentos especiais dos nossos Aumigos(a)s de quatro patas
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
               {galleryItems.map((item, index) => (
                 <div
                   key={index}
-                  className={`group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${
-                    index === 0 || index === 4 ? 'sm:col-span-2' : ''
-                  }`}
+                  className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
                   <img
                     src={item.image}
                     alt={item.alt}
-                    className="w-full h-[300px] object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-[220px] object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <p className="text-white font-medium text-lg">{item.caption}</p>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute bottom-0 left-0 right-0 p-3">
+                      <p className="text-white font-medium text-sm md:text-base">{item.caption}</p>
                     </div>
                   </div>
                 </div>
@@ -99,10 +107,10 @@ function GalleryPage() {
               Agende uma visita e veja como seu melhor amigo pode se divertir conosco
             </p>
             <a
-              href={`https://wa.me/5511999999999?text=${encodeURIComponent('Olá! Vim pelo site e quero agendar uma visita 🐾')}`}
+              href={`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER}?text=${encodeURIComponent('Olá! Vim pelo site e quero agendar uma visita 🐾')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-lg transition-all duration-200 active:scale-98"
+              className="inline-flex items-center justify-center px-6 py-3 bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-lg transition-all duration-200 hover:translate-y-[-2px] active:scale-98"
             >
               Falar com a gente
             </a>

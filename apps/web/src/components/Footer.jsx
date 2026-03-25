@@ -3,19 +3,19 @@ import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Instagram, Facebook } from 'lucide-react';
 
 function Footer() {
-  const whatsappNumber = '5511986479033';
+  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
   const whatsappMessage = encodeURIComponent('Olá! Vim pelo site e quero agendar uma visita 🐾');
 
   return (
     <footer className="bg-accent border-t border-border py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <div className="flex flex-col items-center md:items-start">
+          <div className="flex flex-col items-center md:items-center">
             <Link to="/" className="flex items-center mb-4">
               <img 
-                src="/src/images/logo.png" 
+                src="/assets/images/logos/logo.png" 
                 alt="Logo Mundo PartiCãoLar" 
-                className="h-20 w-auto object-contain transition-transform hover:scale-105" 
+                className="h-24 w-auto object-contain transition-transform hover:scale-105" 
               />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed text-center md:text-left">
