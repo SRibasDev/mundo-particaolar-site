@@ -13,7 +13,7 @@ function Footer() {
           <div className="flex flex-col items-center md:items-center">
             <Link to="/" className="flex items-center mb-4">
               <img 
-                src="apps/web/public/assets/images/logos/logo.png"
+                src="/public/assets/images/logos/logo.png"
                 alt="Logo Mundo PartiCãoLar" 
                 className="h-24 w-auto object-contain transition-transform hover:scale-105" 
               />
