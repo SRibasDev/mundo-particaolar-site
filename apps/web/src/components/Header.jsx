@@ -25,7 +25,7 @@ function Header() {
           {/* Logo Substituída aqui */}
           <Link to="/" className="flex items-center">
             <img 
-              src='/public/assets/images/logos/logo.png' 
+              src='/assets/images/logos/logo.png' 
               alt="Logo Mundo PartiCãoLar" 
               className="h-28 w-auto object-contain transition-transform hover:scale-105"   
             />
@@ -56,7 +56,7 @@ function Header() {
             <SheetContent side="right" className="w-[300px]">
               <nav className="flex flex-col gap-6 mt-8">
                 {/* Logo também no menu mobile (opcional) */}
-                <img src='/public/assets/images/logos/logo.png' alt="Logo" className="h-12 w-auto object-contain mb-4" />
+                <img src='/assets/images/logos/logo.png' alt="Logo" className="h-12 w-auto object-contain mb-4" />
                 {navLinks.map((link) => (
                   <Link
                     key={link.path}
