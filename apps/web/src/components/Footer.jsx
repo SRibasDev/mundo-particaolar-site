@@ -13,7 +13,7 @@ function Footer() {
           <div className="flex flex-col items-center md:items-center">
             <Link to="/" className="flex items-center mb-4">
               <img 
-                src="/public/assets/images/logos/logo.png"
+                src="apps/web/public/assets/images/logos/logo.png"
                 alt="Logo Mundo PartiCãoLar" 
                 className="h-24 w-auto object-contain transition-transform hover:scale-105" 
               />
@@ -54,7 +54,7 @@ function Footer() {
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
               >
                 <Phone className="h-4 w-4" />
-                <span>(11) 98647-9033</span>
+                <span>whatsappNumber</span>
               </a>
               <a
                 href="mailto:mundoparticaolar@gmail.com"
